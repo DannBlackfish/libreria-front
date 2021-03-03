@@ -16,11 +16,13 @@ export default function Signup() {
             [e.target.name]: e.target.value
         })
         console.log(infoSignup)
+        
     }
 
     const sendNewUser= async() => {
         console.log(infoSignup)
         const uploadUser= await axios.post("http://localhost:3001/signup", infoSignup)
+        console.log("ayuuuda")
         setInfoSignup({
             ...infoSignup,
             name:"",
